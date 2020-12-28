@@ -1,0 +1,31 @@
+HTML: THE ESSENTIALS
+====================
+
+Introduction to HTML
+--------------------
+-> 	HTML IS A MARK UP LANGUAGE
+	-> 	Additional information is added to existing text to add formatting to text
+	-> 	HTML is a language or a syntax that we use to mark up documents and web pages 
+	-> 	Scientific papers in 1989, 1990 were written in HTML.
+	-> 	Without the formatting its plain text.
+	-> 	The goal of HTML is to tell your browser to style pages.
+	-> 	HTTP requests when we load a webpage or specifically when the browser loads the Web page, it's 
+		response includes HTML and javascript
+	-> 	HTML shared set of rules allows browsers 
+->	HTML ELEMENTS
+	->	To write HTML, we pick from a set of standard Elements that all browsers
+		recognize.
+	-> Common Elements include:
+		->	<p> element	- represents a paragraph of text
+		->	<h1> element	- represents the main header on a page
+		->	<img> element	- embeds an image
+		->	<form> element	- represents a form
+	-> To write HTML we use HTML elements. 
+	-> HTML TAGS:
+		-> 	We create elemets by writing tags. Most (but not all) elements consist of an 
+		opening and closing tag.
+		
+		Opening Tag
+		<p> I am a paragraph </p>
+						Closing tag
+			
