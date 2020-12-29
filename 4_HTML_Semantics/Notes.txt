@@ -1,0 +1,9 @@
+HTML: THE ESSENTIALS 
+==================== 
+
+What exactly is HTML5? 
+---------------------- 
+->  HTML5 is the latest evolution of the standard that defines html
+->  HTML standard is a document that defines how HTML should work
+->  The standard describes the rules of HTML and browsers have to
+    work and implement HTML based on these rules
