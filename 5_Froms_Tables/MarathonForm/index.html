@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Race Registration Form</title>
+</head>
+
+<body>
+    <main>
+        <h1>Race Registration!</h1>
+        <form action="./index.html">
+            <div>
+                <label for="first_name">First Name</label>
+                <input type="text" name="first_name" id="first_name" required>
+
+                <label for="last_name">Last Name</label>
+                <input type="text" name="last_name" id="last_name" required>
+            </div>
+            <div>
+                <p>
+                    <label for="race">Select a Race:</label>
+                </p>
+                <div>
+                    <input type="radio" name="race" id="five_k" value="five_k">
+                    <label for="race">First Run 5k</label>
+                </div>
+                <div>
+                    <input type="radio" name="race" id="half_marathon" value="half_marathon">
+                    <label for="race">Half Marathon</label>
+                </div>
+                <div>
+                    <input type="radio" name="race" id="full_marathon" value="full_marathon">
+                    <label for="race">Full Marathon</label>
+                </div>
+            </div>
+            <div>
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" required>
+
+                <label for="password">Password</label>
+                <input type="password" name="password" id="password" required minlength="5" maxlength="20">
+            </div>
+            <div>
+                <label for="age">Select Age Group</label> input:
+                <select name="age" id="age" required>
+                    <option value="18_less">under 18</option>
+                    <option value="18_30">18-30</option>
+                    <option value="30_50">30-50</option>
+                    <option value="50_above">50+</option>
+                </select>
+            </div>
+            <button>Register!</button>
+        </form>
+    </main>
+</body>
+
+</html>

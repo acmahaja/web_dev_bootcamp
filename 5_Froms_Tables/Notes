@@ -1,0 +1,13 @@
+Section 5: HTML: Forms & Tables
+===============================
+
+HTML Tables
+-----------
+
+->  Tables are structured setse of data, made up of rows and columns.
+    They can be a great method of cleary displaying data
+->  In the early days of the web, tables were commonly used to create
+    page layouts. Today, you only use the table element when creating an
+    actual data table
+
+->  
