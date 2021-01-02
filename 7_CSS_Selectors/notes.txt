@@ -1,0 +1,32 @@
+The World of CSS Selectors
+==========================
+
+->  CSS Rules
+    ->  Everything you do in CSS follows this basic pattern:
+        selector {
+            property: value;
+        }
+->  We can select tags ranging from elements to inputs 
+
+->  Universel select:
+    ->  Selects Everything!
+        * {
+            color: black;
+        }
+
+->  Element selector:
+    ->  Selects all elements of the same type
+
+->  Class Selectors
+    ->  Selects elements that have the same class name
+    ->  Selects elements with the class name:
+        .complete {
+            color:green;
+        }
+
+->  Descendent selector
+    ->  Selects elements nested inside another
+    ->  Select all <a>'s that are nested inside an <li>
+        li a {
+            color: teal;
+        }

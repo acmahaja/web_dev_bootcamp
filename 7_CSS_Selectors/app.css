@@ -1,0 +1,87 @@
+button {
+    font-size: 30px;
+    background-color: #E15554;
+}
+
+h1,
+h2 {
+    color: #4D9DE0;
+}
+
+#register {
+    background-color: burlywood;
+}
+
+span {
+    color: grey;
+}
+
+.tag {
+    background-color: crimson;
+    color: cornsilk;
+    font-size: 16px;
+}
+
+.post a {
+    color: cadetblue;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer a {
+    color: red;
+}
+
+input+button {
+    background-color: pink;
+}
+
+h2+button {
+    font-size: 20px;
+    background-color: magenta;
+}
+
+footer>a {
+    color: maroon
+}
+
+input[type="password"] {
+    color: greenyellow
+}
+
+a[href*="google"] {
+    color: brown;
+}
+
+.post button:hover {
+    background-color: red;
+    color: white;
+}
+
+.post a:hover {
+    text-decoration: underline;
+}
+
+.post button:active {
+    background-color: teal;
+}
+
+.post:nth-of-type(2n) {
+    background-color: burlywood;
+}
+
+.post {
+    background-color: brown;
+}
+
+h2::first-letter {
+    font-size: 50px;
+}
+
+p::first-line {
+    color: purple;
+}
+
+p::selection {
+    background-color: rosybrown;
+}
