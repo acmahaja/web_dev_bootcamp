@@ -1,0 +1,58 @@
+CSS: The Very Basics
+====================
+
+What is CSS
+-----------
+->  What is it?
+    ->  CSS is a language for decsribing how documents are 
+        presented visually - how they are arranged and 
+        styled.
+
+->  What does it stand for?
+    ->  CSS stands for Cascading Style Sheets. We'll cover the
+        "cascading" part in a bit;
+        
+->  There's a lot!
+    ->  CSS is very easy to get the hang of, but it can be
+        intimidating because of how many properties we can
+        manipulate.
+
+CSS Rules
+->  (almost) everything you do in CSS follows this basic pattern:
+    selector {
+        property: value;
+    }
+    
+-> Make all <h1> elements purple
+    h1 {
+        color: purple;
+    }
+
+-> Make all image elements 100 px wide & 200 px tall
+    img {
+        width: 100px;
+        height: 200px;
+    }
+
+-> Select every other text input and give it a red border:
+    input[type="text"]:nth-of-type(2n){
+        border:2px solid red;
+    }
+
+
+Including Styles Correctly
+--------------------------
+->  Inline Styles
+    ->  You can write your styles directly inline on each element,
+        but this is NOT A GOOD IDEA most of the time.
+
+-> The <STYLE> Element
+    ->  You can write your styles inside of a <style> element.
+        This is easy, but it makes it impossible to share styles
+        between documents.
+    ->  NOT RECOMMENDED EITHER
+
+-> External Stylesheet
+    ->  Write your styles in a .css file, and then include the
+        using a <link> in the head of your html document.
+    ->  Recommended!
