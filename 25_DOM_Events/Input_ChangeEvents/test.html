@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Input Event</title>
+    <!--LEAVE THESE LINES ALONE, PLEASE! THEY MAKE THE LIVE PREVIEW WORK!-->
+    <script src="node_modules/babel-polyfill/dist/polyfill.js" type="text/javascript">
+    </script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+</head>
+
+<body>
+    <h1>Enter Your Username</h1>
+    <input type="text" id="username">
+    <script>
+        const input = document.querySelector('input');
+        const h1 = document.querySelector('h1');
+        input.addEventListener('input', () => {
+            if (input.value.length !== 0) {
+                h1.innerText = `Welcome, ${input.value}`;
+            } else {
+                h1.innerText = "Enter Your Username";
+            }
+
+        });
+    </script>
+</body>
+
+</html>
