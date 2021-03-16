@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intro to OOP</title>
+</head>
+
+<body>
+
+    <script>
+        class Color {
+            constructor(r, g, b, name) {
+                this.r = r;
+                this.g = g;
+                this.b = b;
+                this.name = name;
+            }
+            rgb() {
+                const {
+                    r,
+                    g,
+                    b
+                } = this;
+                return `rgb(${r}, ${g}, ${b})`;
+            }
+            rgba(a = 1.0) {
+                return `rgba(${r}, ${g}, ${b}, ${a})`;
+
+            }
+
+            hex() {
+                const {
+                    r,
+                    g,
+                    b
+                } = this;
+                return '#' + ((1 << 24) + (r << 16) + (g << 8) + b).toString(16).slice(1);
+
+            }
+
+            rgba()
+        }
+        const c1 = new Color(255, 67, 89, `tomato`)
+    </script>
+
+</body>
+
+</html>
