@@ -4,6 +4,7 @@ const path = require("path");
 
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
+app.use(express.urlencoded({extended:true}))
 
 const mongoose = require("mongoose");
 mongoose.connect("mongodb://localhost:27017/yelp-camp");
@@ -18,6 +19,17 @@ const Campground = require("./models/campground");
 app.get("/", (req, res) => {
   res.render("home");
 });
+
+
+app.post("/campgrounds", async (req,res)=>{
+    const c = new Campground(req.body)
+    await c.save()
+    res.redirect(`/campgrounds/${c._id}`)
+})
+
+app.get("/campgrounds/new", (req,res)=>{
+    res.render("campgrounds/new")
+})
 
 app.get("/campgrounds/:id", async (req, res) => {
   let { id } = req.params;
