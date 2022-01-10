@@ -1,0 +1,1 @@
+module.exports.categories = ['fruit', 'vegetables', 'dairy']
