@@ -1,75 +1,69 @@
-const express = require('express');
+const express = require('express')
 const app = express();
 
-const morgan = require('morgan');
+const morgan = require('morgan')
+
+// app.use(()=>{
+//     console.log("Heyy");
+// })
 
 // app.use(express.urlencoded())
-// app.use(morgan('tiny'))
-// app.use(morgan('dev'))
-// app.use(morgan('common'))
 
-// app.use((req,res, next)=>{
-//     // res.send('HICKACED BY MY APP.USE 😈')
-//     console.log("This is my first middleware");
-//     return next()
-// })
-
-// app.use((req, res, next) => {
-//     console.log("This is my second middleware");
-//     return next()
-//     console.log("This is my third middleware");
-
-// })
-
-// app.use(morgan('common'))
-app.use(morgan('tiny'))
-
-app.use((req,res,next)=>{
-    // req.method = 'GET'
+app.use(morgan('tiny'));
+app.use((req, res, next) => {
+    // req.method = 'POST'
     req.requestTime = Date.now()
-    console.log(req.method, req.path);
+    console.log(req.method, req.path)
     next()
 })
 
-app.use('/dogs', (req,res,next)=>{
-    console.log("I LOVE DOGS!!!");
-    next();
+app.use('/dogs', (req, res, next) => {
+    console.log("I LOVE DOGS");
+    next()
 })
 
-// app.use((req, res, next)=>{
-//     const {password}=req.query;
-//     if (password === 'chickennugget'){
-//         next();
-//     }
-//     res.send('YOU NEED THE PASSWORD!!!')
+const verifyPassword = (req, res, next) => {
+    // console.log("parms: " + JSON.stringify(req.query));
+    const { password } = req.query
+    if (password === 'chickennugget') {
+        next()
+    }
+    res.send("You arent authenticated")
+}
+
+// app.use((req,res, next)=>{
+//     console.log("MY FIRST MIDDLEWEAR");
+//     next();
+//     console.log("I can see this");
 // })
 
-const verifyPassword = ((req,res,next)=>{
-    const { password } = req.query;
-    if (password === 'chickennugget') {
-        next();
-    }
-    res.send('YOU NEED THE PASSWORD!!!')})
+// app.use((req, res, next) => {
+//     console.log("MY SECOND MIDDLEWEAR");
+//     return next();
+// })
 
-app.get('/secret', verifyPassword ,(req,res)=>{
-    console.log(`Request DATE:${req.requestTime}`);
-    res.send("I HAVE A SECRET TO TELL YOU 😜")
+// app.use((req, res, next) => {
+//     console.log("MY THIRD MIDDLEWEAR");
+//     return next();
+// })
+
+app.get('/', (req, res) => {
+    console.log(`Request Time: ${Date(req.requestTime)}`);
+    res.send('Home Page')
 })
 
 app.get('/dogs', verifyPassword, (req, res) => {
-    res.send('WOOOF WOOF!')
+    res.send('Dog Page')
 })
 
-app.get('/', (req, res) => {
-
-    console.log(`REQUEST DATE: ${req.requestTime}`);
-    res.send('HOME PAGE!')
+app.get('/secret', verifyPassword, (req, res) => {
+    res.send("THERE IS NO SECRET HERE")
 })
 
-app.use((req,res)=>{
-    res.status(404).send('NOT FOUND!')
+app.use((req, res) => {
+    res.send('404 NOT FOUND')
 })
 
-app.listen(3000, ()=>{
-    console.log('App is running on localhost:3000');
+app.listen(3000, () => {
+    console.log("App is running on localhost:3000");
 })
